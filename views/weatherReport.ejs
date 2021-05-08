@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Report by Harsh Sharma</title>
+    <link rel="icon" href="images/weatherIcon.webp" sizes="16x16" type="image/png">
+
+    <style>
+      body {
+        background-color: #F5F5F5;
+              }
+      .top {
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        width: 40%;
+        text-align: center;
+        margin: auto;
+        background-color: #242424;
+        color: white;
+
+      }
+      .temp{
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        width: 280px;
+        height: 280px;
+        text-align: center;
+        margin: auto;
+        background-color: #242424;
+        color: #B58C2E;
+        
+      }
+      .temp h1{
+          margin-top: 28%;
+          font-size: 60px;
+          text-align: center;
+      }
+      .temp p{
+          color: white;
+          text-align: left;
+          margin-left: 2%;
+      }
+      .change{
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        width: fit-content;
+        text-align: center;
+        margin: auto;
+        background-color: #242424;
+        color: white;
+          
+      }
+      button{
+          background-color: #B58C2E;
+          width:max-content;
+          height: 40px;
+          border: 0ch;
+          border-radius: 20px;
+          font-size: larger;
+          
+      }
+      
+    </style>
+  </head>
+  <body>
+   
+    <div class="temp">
+        <p><%=weather%></p>
+      <h1><%=temperature%>°</h1>
+      <h2>Celcius</h2>
+      
+      <img src="<%=image%>" alt="">
+
+    </div>
+    <br><br><br><br><br><br>
+    <div class="change">
+        <h2>Your current city is <%=city%>.</h2>
+        <form action="/changeCity" method="POST" >
+            <button><strong>Change City</strong></button>
+        </form>
+      </div>
+   
+  </body>
+</html>
